@@ -3,23 +3,23 @@ package com.example.worldcup.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import com.example.worldcup.R
 import com.example.worldcup.databinding.ActivityMainBinding
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.nio.Buffer
 
-class MainActivity : AppCompatActivity() {
-    lateinit var  binding:ActivityMainBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding=ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+class MainActivity :BaseActivity<ActivityMainBinding>(){
 
-        openFile()
+    override val TAG: String? = "mainActivity"
+    override val bidingInFlatr: (LayoutInflater) -> ActivityMainBinding = ActivityMainBinding::inflate
+
+    override fun setUp() {
     }
 
-
+    override fun addCallBack() {
+    }
 
     fun openFile()
     {
