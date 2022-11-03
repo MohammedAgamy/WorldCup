@@ -1,4 +1,4 @@
-package com.example.worldcup.Data.Domain
+package com.example.worldcup.util
 
 object Constant {
     object index {
