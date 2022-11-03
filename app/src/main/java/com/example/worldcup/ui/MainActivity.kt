@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     fun openFile()
     {
         val inPutStream=assets.open("worldcup.csv")
