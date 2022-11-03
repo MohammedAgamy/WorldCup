@@ -10,9 +10,9 @@ import androidx.viewbinding.ViewBinding
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     abstract val TAG:String?
-    abstract val bidingInFlatr: (LayoutInflater) -> VB
-    private var _binding: ViewBinding? = null
-    protected val binding = _binding as VB
+    abstract val bidingInFlatr: (LayoutInflater) -> VB ///???
+    private var _binding: ViewBinding? = null ///???
+    protected val binding = _binding as VB  ///???
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
