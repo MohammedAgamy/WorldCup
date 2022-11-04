@@ -7,7 +7,6 @@ data class Match(val year:Int ,
                  val awyTeamName:String ,
                  val homeTeamGoals:Int ,
                  val awyTeamGoals:Int ,
-                 val referName:String ,
 
 )
 

@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import com.example.worldcup.R
 import com.example.worldcup.databinding.ActivityMainBinding
+import com.example.worldcup.util.CsvParse
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.nio.Buffer
@@ -25,7 +26,12 @@ class MainActivity :BaseActivity<ActivityMainBinding>(){
     {
         val inPutStream=assets.open("worldcup.csv")
         val buffer=BufferedReader(InputStreamReader(inPutStream))
+        val parse = CsvParse()
 
-        buffer.forEachLine { Log.e("main" , it) }
+        buffer.forEachLine {
+            val currentMatch=parse.parse(it)
+            log(currentMatch)
+
+        }
     }
 }

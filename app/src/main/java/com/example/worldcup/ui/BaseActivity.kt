@@ -25,8 +25,8 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     abstract fun setUp()
     abstract fun addCallBack()
-    protected fun log(value: String) {
-        Log.e(TAG, value)
+    protected fun log(value: Any) {
+        Log.e(TAG, value.toString())
     }
 
 }
